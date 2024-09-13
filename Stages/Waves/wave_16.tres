@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Wave" load_steps=7 format=3 uid="uid://cpudabrewniti"]
+
+[ext_resource type="Script" path="res://Stages/enemy_weight.gd" id="1_uaeue"]
+[ext_resource type="PackedScene" uid="uid://dihg03wten6do" path="res://Source/Entities/Characters/Enemies/enemy.tscn" id="2_0myg3"]
+[ext_resource type="Script" path="res://Stages/enemy_weight_array.gd" id="3_mh4dw"]
+[ext_resource type="Script" path="res://Stages/wave.gd" id="4_7xrrk"]
+
+[sub_resource type="Resource" id="Resource_h73mp"]
+script = ExtResource("1_uaeue")
+scene = ExtResource("2_0myg3")
+weight = 1
+
+[sub_resource type="Resource" id="Resource_ejen1"]
+script = ExtResource("3_mh4dw")
+array = Array[ExtResource("1_uaeue")]([SubResource("Resource_h73mp")])
+
+[resource]
+script = ExtResource("4_7xrrk")
+enemy_spawn_time = 0.5
+wave_duration = 60.0
+enemy_weight_array = SubResource("Resource_ejen1")

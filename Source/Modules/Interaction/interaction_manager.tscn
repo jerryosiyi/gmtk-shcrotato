@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://slwol3bxt0ve"]
+
+[ext_resource type="Script" path="res://Source/Modules/Interaction/interaction_manager.gd" id="1_4jrsr"]
+[ext_resource type="Theme" uid="uid://dco2everh6egm" path="res://Source/UI/Themes/default_theme.tres" id="2_h5jn5"]
+
+[node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_4jrsr")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+offset_left = -86.0
+offset_right = 88.0
+offset_bottom = 137.0
+
+[node name="Label" type="Label" parent="VBox"]
+z_index = 20
+layout_mode = 2
+theme = ExtResource("2_h5jn5")
+text = "[E] TO INTERACT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeTitle" type="Label" parent="VBox"]
+z_index = 20
+layout_mode = 2
+theme = ExtResource("2_h5jn5")
+text = "Bullet Speed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeDesc" type="Label" parent="VBox"]
+z_index = 20
+layout_mode = 2
+theme = ExtResource("2_h5jn5")
+theme_override_font_sizes/font_size = 60
+text = "+5"
+horizontal_alignment = 1
+vertical_alignment = 1

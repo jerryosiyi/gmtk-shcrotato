@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SpeedPlayerUpgrade" load_steps=2 format=3 uid="uid://lcemwex0uxyd"]
+
+[ext_resource type="Script" path="res://Source/Entities/Upgrades/Player/speed_player_upgrade.gd" id="1_l3b8a"]
+
+[resource]
+script = ExtResource("1_l3b8a")
+modifier = 0
+amount = 5.0
+name = "Player Speed"
+description = "+5"

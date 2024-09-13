@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=3 uid="uid://n1mjmrvf8pix"]
+
+[ext_resource type="Script" path="res://Source/UI/Menus/main_menu.gd" id="1_6j8y2"]
+[ext_resource type="FontFile" uid="uid://dh8fwujqf3o2r" path="res://Assets/Fonts/m6x11.ttf" id="2_4i8l0"]
+[ext_resource type="FontFile" uid="uid://c4m77tfc4qq3m" path="res://Assets/Fonts/Roundberly.ttf" id="2_5yvhm"]
+[ext_resource type="Texture2D" uid="uid://dkm6rm8ercrcv" path="res://Assets/zxaF2R.png" id="2_wdcin"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ges1p"]
+texture = ExtResource("2_wdcin")
+modulate_color = Color(0.37, 0.37, 0.37, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvv6n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0c0y"]
+bg_color = Color(0.84, 0.84, 0.84, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydnlj"]
+bg_color = Color(0.65, 0.65, 0.65, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnp3u"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6j8y2")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ges1p")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.0
+offset_top = 139.0
+offset_right = 315.0
+offset_bottom = 252.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 20
+theme_override_fonts/font = ExtResource("2_5yvhm")
+theme_override_font_sizes/font_size = 120
+text = "SchröTato"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -1.0
+offset_right = 172.0
+offset_bottom = 213.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4i8l0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jvv6n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0c0y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ydnlj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fnp3u")
+text = "Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4i8l0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jvv6n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0c0y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ydnlj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fnp3u")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

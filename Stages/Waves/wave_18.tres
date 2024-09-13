@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Wave" load_steps=7 format=3 uid="uid://5kdsbcspkh88"]
+
+[ext_resource type="Script" path="res://Stages/enemy_weight.gd" id="1_2lkio"]
+[ext_resource type="PackedScene" uid="uid://dihg03wten6do" path="res://Source/Entities/Characters/Enemies/enemy.tscn" id="2_krfml"]
+[ext_resource type="Script" path="res://Stages/enemy_weight_array.gd" id="3_roi56"]
+[ext_resource type="Script" path="res://Stages/wave.gd" id="4_qkkf4"]
+
+[sub_resource type="Resource" id="Resource_h73mp"]
+script = ExtResource("1_2lkio")
+scene = ExtResource("2_krfml")
+weight = 1
+
+[sub_resource type="Resource" id="Resource_ejen1"]
+script = ExtResource("3_roi56")
+array = Array[ExtResource("1_2lkio")]([SubResource("Resource_h73mp")])
+
+[resource]
+script = ExtResource("4_qkkf4")
+enemy_spawn_time = 0.4
+wave_duration = 60.0
+enemy_weight_array = SubResource("Resource_ejen1")

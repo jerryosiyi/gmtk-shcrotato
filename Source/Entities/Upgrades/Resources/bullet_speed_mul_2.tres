@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SpeedBulletUpgrade" load_steps=2 format=3 uid="uid://c0vnxsihicdjl"]
+
+[ext_resource type="Script" path="res://Source/Entities/Upgrades/Bullets/speed_bullet_upgrade.gd" id="1_3oybd"]
+
+[resource]
+script = ExtResource("1_3oybd")
+modifier = 1
+amount = 2.0
+name = "Bullet Speed"
+description = "x2"

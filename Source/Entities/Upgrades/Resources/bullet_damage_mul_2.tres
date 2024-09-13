@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DamageBulletUpgrade" load_steps=2 format=3 uid="uid://btgtjaxlydu8f"]
+
+[ext_resource type="Script" path="res://Source/Entities/Upgrades/Bullets/damage_bullet_upgrade.gd" id="1_88nvw"]
+
+[resource]
+script = ExtResource("1_88nvw")
+modifier = 1
+amount = 2.0
+name = "Bullet Damage"
+description = "x2"

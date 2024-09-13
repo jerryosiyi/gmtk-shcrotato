@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PierceBulletUpgrade" load_steps=2 format=3 uid="uid://bmb4md7bveebp"]
+
+[ext_resource type="Script" path="res://Source/Entities/Upgrades/Bullets/pierce_bullet_upgrade.gd" id="1_7s0ii"]
+
+[resource]
+script = ExtResource("1_7s0ii")
+modifier = 0
+amount = 1
+name = "Bullet Piercing"
+description = "+1"

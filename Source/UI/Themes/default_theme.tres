@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dco2everh6egm"]
+
+[ext_resource type="FontFile" uid="uid://dh8fwujqf3o2r" path="res://Assets/Fonts/m6x11.ttf" id="1_gs6vc"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_gs6vc")

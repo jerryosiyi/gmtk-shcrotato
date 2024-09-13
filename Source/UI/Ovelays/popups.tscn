@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://booe837d3yrpk"]
+
+[ext_resource type="Script" path="res://Source/UI/Ovelays/popups.gd" id="1_4k70b"]
+[ext_resource type="FontFile" uid="uid://dh8fwujqf3o2r" path="res://Assets/Fonts/m6x11.ttf" id="2_2yac1"]
+
+[node name="Popups" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 459.0
+offset_top = 128.0
+offset_right = -494.0
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4k70b")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UpgradePopup" type="PopupPanel" parent="UI"]
+unique_name_in_owner = true
+position = Vector2i(500, 100)
+size = Vector2i(242, 206)
+visible = true
+
+[node name="VCont" type="VBoxContainer" parent="UI/UpgradePopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 238.0
+offset_bottom = 202.0
+theme_override_constants/separation = 40
+
+[node name="MCont1" type="MarginContainer" parent="UI/UpgradePopup/VCont"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+
+[node name="UpgradeName" type="Label" parent="UI/UpgradePopup/VCont/MCont1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2yac1")
+theme_override_font_sizes/font_size = 60
+text = "Upgrade"
+horizontal_alignment = 1
+
+[node name="MCont2" type="MarginContainer" parent="UI/UpgradePopup/VCont"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="UpgradeValue" type="Label" parent="UI/UpgradePopup/VCont/MCont2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2yac1")
+theme_override_font_sizes/font_size = 60
+text = "x2"
+horizontal_alignment = 1
+vertical_alignment = 1

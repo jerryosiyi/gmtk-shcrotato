@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn44yuenuhxyk"]
+
+[ext_resource type="Script" path="res://Source/Entities/Projectiles/bullet_base.gd" id="1_gphjd"]
+[ext_resource type="Texture2D" uid="uid://dl17ofcwid6md" path="res://Assets/Sprites/Projectiles/projectile.png" id="2_w3d74"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2q8ms"]
+radius = 17.0294
+
+[node name="StandardBullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_gphjd")
+damage = 20.0
+
+[node name="Head" type="CollisionShape2D" parent="."]
+position = Vector2(11, 0)
+shape = SubResource("CircleShape2D_2q8ms")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_w3d74")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
